@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+<table border='1' style='width: 100%'>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>description</th>
+        <th>start date</th>
+        <th>end date</th>
+        <th>completed</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for task in tasks %}
+        <tr>
+            <th>{{ loop.index }}</th>
+            <td>{{ task['description'] }}</td>
+            {% if (task['start'] == 'Any' and task['end'] == 'Any') %}
+                <td colspan='2' style='text-align: center'>Any</td>
+            {% else %}
+                <td style='text-align: center'>{{ task['start'] }}</td>
+                <td style='text-align: center'>{{ task['end'] }}</td>
+            {% endif %}
+            <td style='text-align: center'>
+                {% if (task['completed']) %}
+                    Yes
+                {% else %}
+                    No
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

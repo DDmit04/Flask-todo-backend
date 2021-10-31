@@ -1,0 +1,18 @@
+<div class="tab-pane fade show active" id="auth" role="tabpanel" aria-labelledby="home-tab">
+    <div class="my-3">
+        <label for="username-or-email" class="form-label">Username or email</label>
+        <input type="text" class="form-control" id="username-or-email">
+        <div class="invalid-feedback">
+            Email is invalid!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+        <div class="invalid-feedback">
+            Password can't be empty!
+        </div>
+    </div>
+    <button id="login-btn" class="btn btn-primary">Login</button>
+</div>
+<script type="module" src={{ url_for('static', filename='js/user/Auth.js') }}></script>

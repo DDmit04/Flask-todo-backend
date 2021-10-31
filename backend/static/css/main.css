@@ -1,0 +1,47 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background-color: #f6f3f3;
+  margin-bottom: 100px;
+}
+#add-task-btn {
+  background-color: rebeccapurple;
+  color: white;
+}
+#add-task-btn:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #68259b;
+}
+.shadowed {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.input-group .table {
+  padding: 10px !important;
+}
+.todo-title {
+  padding: 10px;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  background-color: lightcoral;
+}
+.table .task-date {
+  text-align: center;
+  vertical-align: center;
+}
+.empty-list {
+  font-style: italic;
+  text-align: center;
+}
+.turn-task-btn, .delete-task-btn {
+  width: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rebeccapurple;
+}

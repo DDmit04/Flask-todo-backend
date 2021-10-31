@@ -1,0 +1,18 @@
+{% extends "parts/tasks/ContentCard.html" %}
+<div class="card shadowed rounded">
+    <div class="card-body">
+        {% block cardHeader %}
+            <h1 class="border-bottom card-title todo-title rounded">Next features</h1>
+        {% endblock %}
+        {% block inputBlock %}
+        {% endblock %}
+        {% block cardContent %}
+            <ul class="list-group">
+                <li class="list-group-item">Add sorting by task name, dates, complete!</li>
+                <li class="list-group-item">Edit tasks data - can change tasks dates and description!</li>
+                <li class="list-group-item">Tasks pagination!</li>
+                <li class="list-group-item">Improve user experience - add load bars and faster loading!</li>
+            </ul>
+        {% endblock %}
+    </div>
+</div>

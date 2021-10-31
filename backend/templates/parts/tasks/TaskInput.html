@@ -1,0 +1,21 @@
+<div class="input-group">
+    <textarea id="task-desc" type="text" class="form-control" placeholder="Input new task..."></textarea>
+    <div>
+        <span class="input-group-text">from date</span>
+        <input type="text" class="date-pick input-sm form-control" id="task-start-date"/>
+    </div>
+    <div>
+        <span class="input-group-text">to date</span>
+        <input type="text" class="date-pick input-sm form-control" id="task-end-date"/>
+    </div>
+    <button type="submit" class="btn" id="add-task-btn">Add</button>
+</div>
+
+<!--    date-picker css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='js/datepicker/css/bootstrap-datepicker3.css') }}">
+<!--    date-picker js-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/datepicker/locales/bootstrap-datepicker.ru.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/datepickerInit.js') }}"></script>
+<script type="module" src={{ url_for('static', filename='js/task/AddTask.js') }}></script>

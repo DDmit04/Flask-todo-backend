@@ -1,0 +1,21 @@
+.my-nav {
+  background-color: rebeccapurple;
+  margin-bottom: 30px;
+  height: 70px
+}
+
+.nav-ico-image {
+  width: 64px;
+  height: 45px;
+}
+.nav-item.my a {
+  display: block;
+  color: white !important;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav-item.my a:hover {
+  background-color: #68259b;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

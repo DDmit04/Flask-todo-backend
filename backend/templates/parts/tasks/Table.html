@@ -1,0 +1,49 @@
+<table id="task-table" class="table table-bordered">
+    {% if tasks|length > 0 %}
+        <thead id="table-head">
+        <tr>
+            <th scope="col" class="col-1">#</th>
+            <th scope="col" class="col-7">description</th>
+            <th scope="col" class="col-1">start date</th>
+            <th scope="col" class="col-1">end date</th>
+            <th scope="col" class="col-1">completed</th>
+            <th scope="col" class="col-1">delete</th>
+        </tr>
+        </thead>
+    {% endif %}
+    <tbody id="table-body">
+    {% if tasks|length > 0 %}
+        {% for task in tasks %}
+            <tr>
+                <th class="col-1" scope="row">{{ loop.index }}</th>
+                <td class="col-7">{{ task['description'] }}</td>
+                {% if (task['start'] == 'Any' and task['end'] == 'Any') %}
+                    <td class="col-2 task-date" colspan='2' style='text-align: center'>Any</td>
+                {% else %}
+                    <td class="col-1 task-date" style='text-align: center'>{{ task['start'] }}</td>
+                    <td class="col-1 task-date" style='text-align: center'>{{ task['end'] }}</td>
+                {% endif %}
+                <td class="col-1">
+                    {% if (task['completed']) %}
+                        <button id="{{ task['id'] }}" class="turn-task-btn btn btn-sm btn-success">
+                            Yes <i class='bi bi-check-circle'></i>
+                        </button>
+                    {% else %}
+                        <button id="{{ task['id'] }}" class="turn-task-btn btn btn-sm btn-danger">
+                            No <i class='bi bi-x-circle'></i>
+                        </button>
+                    {% endif %}
+                </td>
+                <td class="col-1">
+                    <button id="{{ task['id'] }}" class="delete-task-btn btn btn-danger btn-sm">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </td>
+            </tr>
+        {% endfor %}
+    {% else %}
+        <h1 id="no-tasks-placeholder" class='empty-list my-3'>Nothing to do :(</h1>
+    {% endif %}
+    </tbody>
+</table>
+<script type="module" src="{{ url_for('static', filename='js/task/LoadTasks.js') }}"></script>

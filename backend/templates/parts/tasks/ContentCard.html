@@ -1,0 +1,19 @@
+<div class="card shadowed rounded">
+    <div class="card-body">
+        {% block cardHeader %}
+            <h1 class="border-bottom card-title todo-title rounded">TO DO list</h1>
+            <hr class="my-3">
+        {% endblock %}
+        <div class="row">
+            {% block inputBlock %}
+                {% include "parts/tasks/TaskInput.html" %}
+            {% endblock %}
+        </div>
+        <hr class="my-3">
+        <div class="row" style="padding-left: 20px; padding-right: 20px">
+            {% block cardContent %}
+                {% include "parts/tasks/Table.html" %}
+            {% endblock %}
+        </div>
+    </div>
+</div>

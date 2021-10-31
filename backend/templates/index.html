@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "parts/main/Header.html" %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='resources/favicon.ico') }}">
+</head>
+<body>
+{% block navbar %}
+    {% include "parts/main/Navbar.html" %}
+{% endblock %}
+{% block indexContent %}
+    No content
+{% endblock %}
+{% block footer %}
+    {% include "parts/main/Footer.html" %}
+{% endblock %}
+</body>
+</html>

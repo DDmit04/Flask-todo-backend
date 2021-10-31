@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block indexContent %}
+    {% block authModal %}
+        {% include "parts/userAuth/AuthModal.html" %}
+    {% endblock %}
+    <div class="container">
+        {% block alerts %}
+            <div id="info-board"></div>
+        {% endblock %}
+        <div class="row">
+            {% block content %}
+                {% include "parts/tasks/ContentCard.html" %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
